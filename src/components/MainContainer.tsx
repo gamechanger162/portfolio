@@ -43,11 +43,13 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <WhatIDo />
             <Career />
             <Work />
-            {isDesktopView && (
-              <Suspense fallback={<div>Loading....</div>}>
+            <div style={{display: 'block', width: '100%', height: '200px', backgroundColor: 'var(--backgroundColor)'}}></div>
+            <Suspense fallback={<div>Loading....</div>}>
+              <div style={{position: 'relative', display: 'block', isolation: 'isolate', backgroundColor: 'var(--backgroundColor)', padding: '100px 0'}}>
                 <TechStack />
-              </Suspense>
-            )}
+              </div>
+            </Suspense>
+            <div style={{display: 'block', width: '100%', height: '200px', backgroundColor: 'var(--backgroundColor)'}}></div>
             <Contact />
           </div>
         </div>

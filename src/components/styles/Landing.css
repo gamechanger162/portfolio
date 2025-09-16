@@ -106,7 +106,7 @@
   transform: translateX(-50%);
   width: 100%;
   left: 50%;
-  z-index: 0;
+  z-index: 5;
   bottom: 50px;
   pointer-events: inherit;
 }
@@ -295,7 +295,7 @@ h2.landing-info-h2 {
   .character-model {
     height: 100vh;
     bottom: 0;
-    z-index: 11;
+    z-index: 8;
     position: fixed;
   }
   .character-model::after,

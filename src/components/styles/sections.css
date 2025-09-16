@@ -1,0 +1,125 @@
+/* Section-specific fixes for overlapping */
+.work-section {
+  position: relative !important;
+  z-index: 20 !important;
+  background-color: var(--backgroundColor) !important;
+  margin-bottom: 0 !important;
+  isolation: isolate !important;
+  min-height: 100vh !important;
+}
+
+.techstack {
+  position: relative !important;
+  z-index: 10 !important;
+  background-color: var(--backgroundColor) !important;
+  margin-top: 0 !important;
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+  margin-bottom: 0 !important;
+  overflow: visible !important;
+  isolation: isolate !important;
+  display: block !important;
+  min-height: 80vh !important;
+}
+
+.contact-section {
+  position: relative !important;
+  z-index: 30 !important;
+  background-color: var(--backgroundColor) !important;
+  margin-top: 0 !important;
+  padding-top: 200px !important;
+  isolation: isolate !important;
+}
+
+/* Ensure proper stacking context */
+#smooth-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix for canvas overlapping */
+.tech-canvas {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100% !important;
+  height: 70% !important;
+  max-height: 600px !important;
+  z-index: 1 !important;
+  pointer-events: auto !important;
+  contain: layout;
+}
+
+/* Ensure TechStack heading is visible */
+.techstack h2 {
+  position: relative !important;
+  z-index: 15 !important;
+  margin-bottom: 100px !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Ensure sections don't overlap */
+.work-section,
+.techstack,
+.contact-section {
+  contain: layout;
+  overflow: visible;
+}
+
+/* Clear any floating or overlapping elements */
+.work-section {
+  clear: both;
+}
+
+.techstack {
+  clear: both;
+}
+
+.contact-section {
+  clear: both;
+}
+
+/* Ensure proper section flow */
+#smooth-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+#smooth-content > .container-main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix Work section layout */
+.work-container {
+  position: relative;
+  z-index: 21;
+  background-color: var(--backgroundColor);
+}
+
+/* Ensure Contact section is properly positioned */
+.contact-container {
+  position: relative;
+  z-index: 31;
+}
+
+/* Force sections to stack properly */
+.career-section {
+  position: relative !important;
+  z-index: 15 !important;
+  background-color: var(--backgroundColor) !important;
+}
+
+.about-section {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: var(--backgroundColor) !important;
+}
+
+.whatIDO {
+  position: relative !important;
+  z-index: 8 !important;
+  background-color: var(--backgroundColor) !important;
+}
