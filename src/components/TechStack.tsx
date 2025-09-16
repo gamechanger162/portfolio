@@ -167,8 +167,8 @@ const TechStack = () => {
   }, []);
 
   return (
-    <div className="techstack">
-      <h2> My Techstack</h2>
+    <div className="techstack" style={{display: 'block', visibility: 'visible', minHeight: '100vh', position: 'relative'}}>
+      <h2 style={{display: 'block', visibility: 'visible', color: 'white', zIndex: 20}}> My Techstack</h2>
 
       <Canvas
         shadows

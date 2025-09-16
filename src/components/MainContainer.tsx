@@ -43,13 +43,13 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <WhatIDo />
             <Career />
             <Work />
-            <div style={{display: 'block', width: '100%', height: '200px', backgroundColor: 'var(--backgroundColor)'}}></div>
-            <Suspense fallback={<div>Loading....</div>}>
-              <div style={{position: 'relative', display: 'block', isolation: 'isolate', backgroundColor: 'var(--backgroundColor)', padding: '100px 0'}}>
+            <div style={{display: 'block', width: '100%', height: '100px', backgroundColor: 'var(--backgroundColor)'}}></div>
+            <div id="techstack" style={{position: 'relative', display: 'block', isolation: 'isolate', backgroundColor: 'var(--backgroundColor)', minHeight: '100vh'}}>
+              <Suspense fallback={<div style={{color: 'white', textAlign: 'center', padding: '50px'}}>Loading TechStack...</div>}>
                 <TechStack />
-              </div>
-            </Suspense>
-            <div style={{display: 'block', width: '100%', height: '200px', backgroundColor: 'var(--backgroundColor)'}}></div>
+              </Suspense>
+            </div>
+            <div style={{display: 'block', width: '100%', height: '100px', backgroundColor: 'var(--backgroundColor)'}}></div>
             <Contact />
           </div>
         </div>
